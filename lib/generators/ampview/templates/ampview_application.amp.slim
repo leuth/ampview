@@ -1,0 +1,18 @@
+doctype html
+html[amp]
+  head
+    meta[charset="utf-8"]
+    title
+      | Rails AMP
+    link rel="canonical" href="#{ampview_canonical_url}"
+    meta[name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1"]
+    script[type="application/ld+json"]
+      | { "@context": "http://schema.org", "@type": "*****", "mainEntityOfPage": "*****", "datePublished": "*****" }
+    style[amp-custom]
+      body
+      amp-img
+    = ampview_google_analytics_head
+    = ampview_html_header
+  body
+    = ampview_google_analytics_page_tracking
+    = yield
